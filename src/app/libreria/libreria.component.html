@@ -1,9 +1,13 @@
 <div class="row">
   <div class="col-sm-5">
+    <button class="btn btn-primary btn-block" (click)="onNuovoClick()">Nuovo</button>
+    <br>
     <div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action" *ngFor="let libro of libreria; let i = index" (click)="onTitoloClick(i)">
+  <button type="button" class="list-group-item list-group-item-action" *ngFor="let libro of libreria; let i = index" (click)="onTitoloClick(i)" [ngClass]="{'active': corrente == i}">
     {{libro.titolo}}</button>
 </div>
+<hr>
+<br>
   </div>
   <div class="col-sm-7">
     <app-libro [libro]="libreria[corrente]"></app-libro>
