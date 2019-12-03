@@ -14,5 +14,9 @@ export class Libro {
   isNuovaUscita(): boolean {
     return this.annoUscita == new Date().getFullYear(); 
   }
+
+  getTitoloCompleto(){
+    return this.titolo + " - " + this.autore;
+  }
   
 }

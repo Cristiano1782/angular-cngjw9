@@ -1,3 +1,4 @@
+<p class="lead" *ngIf="libro.titolo != '' && libro.autore != '' "  [ngStyle]="{'color' : getColoreTitolo()}" >{{libro.getTitoloCompleto()}}</p>
 <div class="form-group">
   <label>ISBN</label>
   <input type="text" class="form-control"  placeholder="xxx-xx-xxxxx-xx-x" [(ngModel)]="libro.isbn">

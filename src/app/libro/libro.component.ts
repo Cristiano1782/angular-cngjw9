@@ -16,4 +16,8 @@ export class LibroComponent implements OnInit {
     
   }
 
+  getColoreTitolo(){
+    return this.libro.isNuovaUscita()? 'red': 'black';
+  }
+
 }
