@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-sm-5">
     <div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action" *ngFor="let libro of libreria">
+  <button type="button" class="list-group-item list-group-item-action" *ngFor="let libro of libreria; let i = index" (click)="onTitoloClick(i)">
     {{libro.titolo}}</button>
 </div>
   </div>
   <div class="col-sm-7">
-    <app-libro [libro]="libreria[1]"></app-libro>
+    <app-libro [libro]="libreria[corrente]"></app-libro>
   </div>
 </div>
