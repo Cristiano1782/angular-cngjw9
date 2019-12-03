@@ -3,8 +3,10 @@
     <button class="btn btn-primary btn-block" (click)="onNuovoClick()">Nuovo</button>
     <br>
     <div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action" *ngFor="let libro of libreria; let i = index" (click)="onTitoloClick(i)" [ngClass]="{'active': corrente == i}">
+      <div *ngFor="let libro of libreria; let i = index">
+  <button type="button" class="list-group-item list-group-item-action" *ngIf="libro.titolo != ''" (click)="onTitoloClick(i)" [ngClass]="{'active': corrente == i}">
     {{libro.titolo}}</button>
+    </div>
 </div>
 <hr>
 <br>
