@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Libro } from './libro.model';
 
 @Component({
@@ -8,12 +8,12 @@ import { Libro } from './libro.model';
 })
 export class LibroComponent implements OnInit {
 
-  libro: Libro;
+  @Input() libro: Libro;
 
   constructor() { }
 
   ngOnInit() {
-    this.libro = new Libro('123-12-12345-12-1', 'Ma vala', 'Pietro Smusi', 2019);
+    
   }
 
 }
